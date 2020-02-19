@@ -90,7 +90,7 @@ html {
 
 .add-form {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .add-input {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-const TodoForm = ({ addTodo }) => {
+const TodoForm = ({ addTodo, showAdd }) => {
   const [value, setValue] = useState("");
 
   const handleFormSubmit = e => {
@@ -16,7 +16,10 @@ const TodoForm = ({ addTodo }) => {
   };
 
   return (
-    <section className="add">
+    <section
+      className="add"
+      style={!showAdd ? { display: "block" } : { display: "none" }}
+    >
       <form className="add-form" onSubmit={handleFormSubmit}>
         <input
           type="text"
